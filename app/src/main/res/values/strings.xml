@@ -1,3 +1,10 @@
 <resources>
+
+    <string name="welcome_to_hisab_book">Welcome To Hisab Book</string>
+    <string name="User_Id">User Id</string>
+    <string name="Password">Password</string>
+    <string name="remember_password_in_this_device">Remember password in this device</string>
+    <string name="log_in">log In</string>
+    <string name="new_user_signup_here">new user signup here</string>
     <string name="app_name">Hisab book</string>
 </resources>
