@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812558548099",
+    "firebase_url": "https://hisab-bok.firebaseio.com",
+    "project_id": "hisab-bok",
+    "storage_bucket": "hisab-bok.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812558548099:android:1305fecf33e72a920eefb6",
+        "android_client_info": {
+          "package_name": "com.example.hisabbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812558548099-erfkcu8asemvpovgfiqmiv25ao0i72a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCks2DZ5aatFrnlikuBbyOP83h-D8NR8Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812558548099-erfkcu8asemvpovgfiqmiv25ao0i72a2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
