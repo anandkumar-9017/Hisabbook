@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "572264853171",
-    "firebase_url": "https://hisab-book-e6cb6.firebaseio.com",
-    "project_id": "hisab-book-e6cb6",
-    "storage_bucket": "hisab-book-e6cb6.appspot.com"
+    "project_number": "550698495412",
+    "firebase_url": "https://hisabbook-32643.firebaseio.com",
+    "project_id": "hisabbook-32643",
+    "storage_bucket": "hisabbook-32643.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:572264853171:android:7a02190075551172cc8ac6",
+        "mobilesdk_app_id": "1:550698495412:android:ccfa1a783920cea53896e1",
         "android_client_info": {
           "package_name": "com.example.hisabbook"
         }
       },
       "oauth_client": [
         {
-          "client_id": "572264853171-kki9v0hovsluaiv9sn3eh4srem45b64m.apps.googleusercontent.com",
+          "client_id": "550698495412-qed6k6oilt9ebuncbtqki523libv0trs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBHjr9m-gOCCYjn0WQlbaHCpyn1DYDFnzA"
+          "current_key": "AIzaSyDsdm3eBCgqrxgLDvFfPIbI60qWZ4MopWE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "572264853171-kki9v0hovsluaiv9sn3eh4srem45b64m.apps.googleusercontent.com",
+              "client_id": "550698495412-qed6k6oilt9ebuncbtqki523libv0trs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
