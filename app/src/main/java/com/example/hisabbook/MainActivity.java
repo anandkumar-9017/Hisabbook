@@ -1,20 +1,20 @@
 package com.example.hisabbook;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.text.TextUtils;
+        import android.util.Log;
+        import android.view.View;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+        import androidx.annotation.NonNull;
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.Task;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthStateListener;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +40,22 @@ public class MainActivity extends AppCompatActivity {
         Register = findViewById(R.id.textView3);
         forgot = findViewById(R.id.textView);
         mAuth = FirebaseAuth.getInstance();
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser = mAuth.getCurrentUser();
+                if (mFirebaseUser != null) {
+                    Toast.makeText(MainActivity.this, "You are successfully logged in", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainActivity.this, Registration.class);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(MainActivity.this, "You are not logged in", Toast.LENGTH_SHORT).show();
+                }
 
 
+            }
+
+        };
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthStateListener);
+    }
 
 
-}
+
+
+    }
