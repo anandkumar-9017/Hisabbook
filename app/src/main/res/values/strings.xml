@@ -80,4 +80,8 @@
     <string name="Age">Age</string>
     <string name="Address">Adress</string>
     <string name="add_customer">Add Customer</string>
+    <string name="add_worker">Add Worker</string>
+    <string name="vender_name">Vender Name</string>
+    <string name="add_vender">Add Vender</string>
+    <string name="add_sale">Add Sale</string>
 </resources>
