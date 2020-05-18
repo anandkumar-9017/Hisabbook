@@ -46,4 +46,38 @@
     <string name="Name">Name</string>
     <string name="shop_name">shop Name</string>
     <string name="phone_number">Phone Number</string>
+    <string name="menu_stock">Stock</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="select_category">Select Category</string>
+    <string name="add_product">ADD PRODUCT</string>
+    <string name="date">Date</string>
+    <string name="qunatity">Qunatity</string>
+    <string name="size">Size</string>
+    <string name="vender">Vender</string>
+    <string name="mrp">MRP</string>
+    <string name="cost_price">Cost Price</string>
+    <string name="product_code">Product Code</string>
+    <string name="product_name">Product Name</string>
+    <string name="add">Add</string>
+    <string name="update">update</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reset_password">Reset password</string>
+    <string name="email">Email</string>
+    <string name="gst_number">GST Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="shop_address">Shop Address</string>
+    <string name="submit">Submit</string>
+    <string name="add_category">Add Category</string>
+    <string name="enter_category">Enter Category</string>
+    <string name="selling_price">Selling Price</string>
+    <string name="Customer_name">Customer Name</string>
+    <string name="name">Name</string>
+    <string name="worker_code">Worker Code</string>
+    <string name="salary">Salary</string>
+    <string name="Age">Age</string>
+    <string name="Address">Adress</string>
+    <string name="add_customer">Add Customer</string>
 </resources>

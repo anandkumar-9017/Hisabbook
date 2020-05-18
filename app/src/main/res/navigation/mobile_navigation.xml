@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_default">
+
+    <fragment
+        android:id="@+id/nav_add_prod"
+        android:name="com.example.hisabbook.ui.home.HomeFragment"
+        android:label="@string/menu_add_product"
+        tools:layout="@layout/add_product">
+    <action
+        android:id="@+id/action_nav_add_prod_to_nav_default"
+        app:destination="@id/nav_default" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_categ"
+        android:name="com.example.hisabbook.Category"
+        android:label="@string/menu_category"
+        tools:layout="@layout/category" >
+        <action
+            android:id="@+id/action_nav_category_to_nav_default"
+            app:destination="@id/nav_default" />
+        <action
+            android:id="@+id/action_nav_category_to_button_add_categ"
+            app:destination="@id/button_add_category" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_add_category"
+        android:name="com.example.hisabbook.Add_Category"
+        android:label="Add Category"
+        tools:layout="@layout/fragment_add__category" >
+    <action
+        android:id="@+id/action_button_add_category_to_nav_categ"
+        app:destination="@id/nav_categ" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_total_sale"
+        android:name="com.example.hisabbook.sale"
+        android:label="@string/menu_total_sale"
+        tools:layout="@layout/category" >
+        <action
+            android:id="@+id/action_nav_category_to_nav_default"
+            app:destination="@id/nav_default" />
+        <action
+            android:id="@+id/action_nav_sale_to_button_add_sale"
+            app:destination="@id/button_add_sale" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_add_sale"
+        android:name="com.example.hisabbook.Add_Sale"
+        android:label="Add Sale"
+        tools:layout="@layout/fragment_add__sale" >
+        <action
+            android:id="@+id/action_button_add_sale_to_nav_total_sale"
+            app:destination="@id/nav_total_sale" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_worker"
+        android:name="com.example.hisabbook.Workers"
+        android:label="@string/menu_workers"
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_nav_category_to_nav_default"
+            app:destination="@id/nav_default" />
+        <action
+            android:id="@+id/action_nav_worker_to_button_add_worker"
+            app:destination="@id/button_add_worker" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_add_worker"
+        android:name="com.example.hisabbook.Add_Worker"
+        android:label="Add Worker"
+        tools:layout="@layout/fragment_add__worker" >
+        <action
+            android:id="@+id/action_button_add_worker_to_nav_workers"
+            app:destination="@id/nav_worker" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="com.example.hisabbook.Customers"
+        android:label="@string/menu_customer"
+        tools:layout="@layout/fragment_customers" >
+        <action
+            android:id="@+id/action_nav_customers_to_nav_default"
+            app:destination="@id/nav_default" />
+        <action
+        android:id="@+id/action_nav_customer_to_button_add_customer"
+        app:destination="@id/button_add_customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_add_customer"
+        android:name="com.example.hisabbook.Add_Customer"
+        android:label="Add Customer"
+        tools:layout="@layout/fragment_add__customer" >
+    <action
+        android:id="@+id/action_button_add_customer_to_nav_customer"
+        app:destination="@id/nav_customers" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.hisabbook.Profile"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_ediText"
+            app:destination="@id/nav_default" />
+        <action
+            android:id="@+id/action_nav_profile_to_button_edit_profile"
+            app:destination="@id/button_edit_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_venders"
+        android:name="com.example.hisabbook.Venders"
+        android:label="@string/menu_venders"
+        tools:layout="@layout/fragment_venders" >
+        <action
+            android:id="@+id/action_nav_venders_to_nav_default"
+            app:destination="@id/nav_default" />
+        <action
+            android:id="@+id/action_nav_venders_to_button_add_vender"
+            app:destination="@id/button_add_vender" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_add_vender"
+        android:name="com.example.hisabbook.Add_Vender"
+        android:label="Add Vender"
+        tools:layout="@layout/fragment_add__vender" >
+        <action
+            android:id="@+id/action_button_add_vender_to_nav_venders"
+            app:destination="@id/nav_venders" />
+    </fragment>
+    <fragment
+        android:id="@+id/button_edit_profile"
+        android:name="com.example.hisabbook.EditProfile"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_button_edit_profile_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_default"
+        android:name="com.example.hisabbook.ui.slideshow.SlideshowFragment"
+        android:label="default"
+        tools:layout="@layout/fragment_default" >
+        <action
+            android:id="@+id/action_nav_default_to_nav_category"
+            app:destination="@id/nav_categ" />
+        <action
+            android:id="@+id/action_nav_default_to_nav_total_sale"
+            app:destination="@id/nav_total_sale" />
+
+        <action
+            android:id="@+id/action_nav_default_to_nav_add_prod"
+            app:destination="@id/nav_add_prod" />
+        <action
+            android:id="@+id/action_nav_default_to_nav_workers"
+            app:destination="@id/nav_worker" />
+        <action
+            android:id="@+id/action_nav_default_to_nav_venders"
+            app:destination="@id/nav_venders" />
+        <action
+            android:id="@+id/action_nav_default_to_nav_customers"
+            app:destination="@id/nav_customers" />
+        <action
+            android:id="@+id/action_nav_default_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+
+
+</navigation>

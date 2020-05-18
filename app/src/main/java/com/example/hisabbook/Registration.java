@@ -104,4 +104,24 @@ public class Registration extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
  }
 
+    public void sendEmailverification() {
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        if (firebaseUser != null) {
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(Registration.this,"Successfully Registered,Verification mail has been sent", Toast.LENGTH_SHORT).show();
+                        mAuth.signOut();
+                        finish();
+                        startActivity(new Intent(Registration.this, MainActivity.class));
+                    } else {
+                        Toast.makeText(Registration.this,"Verification mail has not been sent!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+        }
+    }
+
 }
