@@ -13,11 +13,24 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hisabbook.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Customers extends Fragment {
+
 
 
 
@@ -33,6 +46,27 @@ public class Customers extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final NavController navController = Navigation.findNavController(view);
+        super.onViewCreated(view, savedInstanceState);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        final FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+        final String firebaseid = mAuth.getCurrentUser().getUid();
+
+        final RecyclerView customer= (RecyclerView) view.findViewById(R.id.customer_list);
+        customer.setLayoutManager(new LinearLayoutManager(getActivity()));
+        DocumentReference dr = fstore.collection("users").document(firebaseid);
+        dr.collection("Customers").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    List<String> list = new ArrayList<>();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        list.add(document.getId());
+                    }
+                    String transferrable[]= list.toArray(new String[0]);
+                    customer.setAdapter(new Adapter(transferrable));
+
+                }
+            }});
 
         FloatingActionButton fab = view.findViewById(R.id.button_add_customer);
         fab.setOnClickListener(new View.OnClickListener() {

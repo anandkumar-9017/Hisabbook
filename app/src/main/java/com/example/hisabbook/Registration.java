@@ -100,6 +100,9 @@ public class Registration extends AppCompatActivity {
                                 user.put("Shop Name", user_shop);
                                 user.put("Phone Number", user_number);
                                 user.put("Email Id", id);
+                                user.put("Gst number", "");
+                                user.put("Shop Address", "");
+
                                 dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {

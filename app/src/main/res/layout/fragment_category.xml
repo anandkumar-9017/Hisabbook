@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Add_Sale">
+    tools:context=".Add_Worker">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="59dp"
@@ -62,7 +62,6 @@
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:gravity="center"
             android:layout_weight="1"
             android:text="@string/worker_code"
             android:textSize="20sp" />
@@ -113,7 +112,7 @@
             android:text="@string/Age"
             android:textSize="20sp" />
 
-        <TextView
+        <EditText
             android:id="@+id/worker_age_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

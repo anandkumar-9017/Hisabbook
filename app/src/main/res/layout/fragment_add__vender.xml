@@ -20,7 +20,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/worker_name_id"
+            android:id="@+id/vender_name_add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -45,7 +45,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/worker_phone_Number_id"
+            android:id="@+id/vender_phone_add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -68,7 +68,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/Worker_add_id"
+            android:id="@+id/vender_address_add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="10dp"

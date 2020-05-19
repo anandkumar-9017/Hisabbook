@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_add_prod"
-        android:name="com.example.hisabbook.ui.home.HomeFragment"
+        android:name="com.example.hisabbook.Add_Product"
         android:label="@string/menu_add_product"
         tools:layout="@layout/add_product">
     <action
@@ -66,17 +66,17 @@
         android:label="@string/menu_workers"
         tools:layout="@layout/fragment_workers" >
         <action
-            android:id="@+id/action_nav_category_to_nav_default"
+            android:id="@+id/action_nav_worker_to_nav_default"
             app:destination="@id/nav_default" />
         <action
             android:id="@+id/action_nav_worker_to_button_add_worker"
-            app:destination="@id/button_add_worker" />
+            app:destination="@id/button_add_w" />
     </fragment>
     <fragment
-        android:id="@+id/button_add_worker"
+        android:id="@+id/button_add_w"
         android:name="com.example.hisabbook.Add_Worker"
         android:label="Add Worker"
-        tools:layout="@layout/fragment_add__worker" >
+        tools:layout="@layout/fragment_category" >
         <action
             android:id="@+id/action_button_add_worker_to_nav_workers"
             app:destination="@id/nav_worker" />

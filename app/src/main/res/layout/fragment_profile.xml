@@ -117,7 +117,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/emailadsress"
+            android:id="@+id/owner_emailadsress"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -130,7 +130,7 @@
 
 
         <TextView
-            android:id="@+id/Owner_shop_address"
+            android:id="@+id/Prof_shop_address"
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -141,7 +141,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/shopadress_id"
+            android:id="@+id/owner_shop_address"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_margin="10dp"

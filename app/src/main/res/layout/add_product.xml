@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".Add_Product">
 
     <LinearLayout
     android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:text="@string/select_category"
         android:textSize="20sp" />
 
-    <Spinner
+    <EditText
         android:id="@+id/Select_Category_id"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -196,7 +196,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:inputType="datetime"
+
             android:text="@string/date"
             android:textSize="20sp" />
 
@@ -204,13 +204,15 @@
             android:id="@+id/Daet_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:inputType="datetime"
+
             android:layout_margin="10dp"
             android:layout_weight="1" />
     </LinearLayout>
 
     <Button
         android:layout_margin="15dp"
-        android:id="@+id/button4"
+        android:id="@+id/button_add_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_product" />
