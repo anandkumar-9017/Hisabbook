@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LogOut extends Fragment {
+public class Stock_temporarily extends Fragment {
 
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthstateListener;
@@ -25,7 +25,7 @@ public class LogOut extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_log_out, container, false);
+        return inflater.inflate(R.layout.fragment_stock_temporarily, container, false);
 
 
 
@@ -34,11 +34,10 @@ public class LogOut extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mAuth.getInstance()
-                .signOut();
-        Toast.makeText(getActivity(), "You are successfully logged out.", Toast.LENGTH_SHORT).show();
 
 
-        Intent back_to_reg=new Intent(getActivity(),MainActivity.class);
+
+
+        Intent back_to_reg=new Intent(getActivity(),stock.class);
         startActivity(back_to_reg);
-}}
+    }}

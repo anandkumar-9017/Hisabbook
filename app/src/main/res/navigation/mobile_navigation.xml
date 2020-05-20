@@ -13,6 +13,25 @@
     <action
         android:id="@+id/action_nav_add_prod_to_nav_default"
         app:destination="@id/nav_default" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_Stock"
+        android:name="com.example.hisabbook.Stock_temporarily"
+        android:label="@string/menu_add_product"
+        tools:layout="@layout/fragment_stock_temporarily">
+        <action
+            android:id="@+id/action_nav_add_prod_to_nav_default"
+            app:destination="@id/nav_default" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_LogOut"
+        android:name="com.example.hisabbook.LogOut"
+        android:label="@string/LogOut"
+        tools:layout="@layout/fragment_log_out">
+        <action
+            android:id="@+id/action_nav_LogOut_to_nav_default"
+            app:destination="@id/nav_default" />
 
 
     </fragment>
@@ -150,7 +169,7 @@
     <fragment
         android:id="@+id/nav_default"
         android:name="com.example.hisabbook.ui.slideshow.SlideshowFragment"
-        android:label="default"
+        android:label="Home"
         tools:layout="@layout/fragment_default" >
         <action
             android:id="@+id/action_nav_default_to_nav_category"

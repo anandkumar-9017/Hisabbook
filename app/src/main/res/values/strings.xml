@@ -85,5 +85,8 @@
     <string name="add_vender">Add Vender</string>
     <string name="add_sale">Add Sale</string>
     <string name="Edit_Profile">Edit Profile</string>
+    <string name="LogOut">LogOut</string>
+    <string name="logging_out">logging out....</string>
+    <string name="wekcome_to_your_own_hisab_book">Wekcome to your own hisab book</string>
 
 </resources>

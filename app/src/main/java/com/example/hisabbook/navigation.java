@@ -1,6 +1,8 @@
 package com.example.hisabbook;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.TextView;
+
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -13,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import org.w3c.dom.Text;
 
 public class navigation extends AppCompatActivity {
 
@@ -28,8 +32,14 @@ public class navigation extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        TextView shop= findViewById(R.id.shop_navigation);
+        TextView name= findViewById(R.id.owner_name_shop);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

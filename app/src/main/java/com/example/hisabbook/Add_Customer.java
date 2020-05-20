@@ -66,7 +66,7 @@ public class Add_Customer extends Fragment {
                 dr.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(getActivity(),"Customerr Added",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),"Customer Added",Toast.LENGTH_SHORT).show();
                         navController.navigate(R.id.action_button_add_customer_to_nav_customer);
 
 
