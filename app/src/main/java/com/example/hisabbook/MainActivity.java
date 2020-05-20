@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         userid = findViewById(R.id.draw);
         password = findViewById(R.id.editText2);
-        skip=findViewById(R.id.button3);
+
         login = findViewById(R.id.button2);
         Register = findViewById(R.id.textView3);
         forgot = findViewById(R.id.textView);
@@ -92,13 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent skip= new Intent(MainActivity.this,navigation.class);
-                startActivity(skip);
-            }
-        });
+
 
 
         Register.setOnClickListener(new View.OnClickListener() {

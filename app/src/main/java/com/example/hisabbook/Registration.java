@@ -85,6 +85,12 @@ public class Registration extends AppCompatActivity {
                     password.setError("Please Enter the password");   //for setting an error if user didn't entered user id
                     password.requestFocus();                        // then focus the edit text
                 } else {
+                    if(password.length()<6)
+                    {
+                        password.setError("Length of password should be greater than 6");   //for setting an error if user didn't entered user id
+                        password.requestFocus();                        // then focus the edit text
+                    }
+                    else {
                     mAuth.createUserWithEmailAndPassword(id, pass).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -121,7 +127,7 @@ public class Registration extends AppCompatActivity {
 
                         }
                     });
-                }
+                }}
             }
         });
 
