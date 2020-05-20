@@ -1,37 +1,53 @@
 package com.example.hisabbook;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
-    private OnItemClickListener mListener;
-    public interface OnItemClickListener{
+
+
+View V_store;
+
+
+
+
+private static OnClicker listener;
+private String[] data;
+    private String collect;
+
+
+
+    public interface OnClicker{
         void onItemClick(int position);
     }
-    public void setOnItemClickListener(OnItemClickListener listener){
-        mListener=listener;
-    }
 
+    public Adapter(OnClicker listener, String[] data ){
+        this.listener =  listener;
 
-    private String[] data;
-    public Adapter(String[] data){
         this.data=data;
 
     }
     @NonNull
     @Override
-    public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public viewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
+
         LayoutInflater inflater= LayoutInflater.from(parent.getContext()) ;
-        View view=inflater.inflate(R.layout.recycler_view_author,parent,false);
+        final View view=inflater.inflate(R.layout.recycler_view_author,parent,false);
+        final viewHolder vHolder= new viewHolder(view);
+
+
+
         return new viewHolder(view);
+
     }
 
     @Override
@@ -47,23 +63,29 @@ public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
         return data.length;
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder{
+    public static class viewHolder extends RecyclerView.ViewHolder{
         TextView category_text;
+        LinearLayout itemworker;
+
         public viewHolder(@NonNull View itemView) {
             super(itemView);
+
             category_text=itemView.findViewById(R.id.text_view_name);
+            itemworker= (LinearLayout) itemView.findViewById(R.id.item_contact_id);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(mListener!=null){
-                        int position =getAdapterPosition();
-                        if(position !=RecyclerView.NO_POSITION){
-                            mListener.onItemClick(position);
+                    if (listener!= null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onItemClick(position);
                         }
                     }
                 }
+
             });
+
         }
     }
 }

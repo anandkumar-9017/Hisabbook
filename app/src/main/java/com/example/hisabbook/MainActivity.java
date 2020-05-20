@@ -1,20 +1,20 @@
 package com.example.hisabbook;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.text.TextUtils;
-        import android.util.Log;
-        import android.view.View;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import androidx.annotation.NonNull;
-        import com.google.android.gms.tasks.OnCompleteListener;
-        import com.google.android.gms.tasks.Task;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -139,4 +139,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
+}

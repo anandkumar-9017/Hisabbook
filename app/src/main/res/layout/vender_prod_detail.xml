@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/vender_product_list"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/vender_product_list_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/vender_product_list_product_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="8dp"
+            android:text="Car"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/vender_product_list_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/vender_product_list_quantity_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="8dp"
+            android:text="5"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/vender_sale_Product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/vender_sale_Product_code_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="8dp"
+            android:text="45000"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/vender_cp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost price"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/vender_cp_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="8dp"
+            android:text="45000"
+
+            />
+    </LinearLayout>  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/vender_MRP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MRP"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/Vender_MRP_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="8dp"
+        android:text="45000"
+
+        />
+</LinearLayout>  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/Vender_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/Vender_size_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="8dp"
+        android:text="45000"
+
+        />
+</LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/Vender_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/Vender_date_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="8dp"
+        android:text="45000"
+
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

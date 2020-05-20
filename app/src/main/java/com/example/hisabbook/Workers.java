@@ -1,10 +1,12 @@
 package com.example.hisabbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,8 +31,16 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
-public class Workers extends Fragment {
+public class Workers extends Fragment implements Adapter.OnClicker {
+
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private final FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+    private final String firebaseid = mAuth.getCurrentUser().getUid();
+    View view_store;
+    private String transferrable[];
+
 
 
 
@@ -44,14 +54,10 @@ public class Workers extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        view_store=view;
         final NavController navController = Navigation.findNavController(view);
-        super.onViewCreated(view, savedInstanceState);
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        final FirebaseFirestore fstore = FirebaseFirestore.getInstance();
-        final String firebaseid = mAuth.getCurrentUser().getUid();
-
         final RecyclerView worker= (RecyclerView) view.findViewById(R.id.worker_list);
         worker.setLayoutManager(new LinearLayoutManager(getActivity()));
         DocumentReference dr = fstore.collection("users").document(firebaseid);
@@ -63,11 +69,16 @@ public class Workers extends Fragment {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         list.add(document.getId());
                     }
-                    String transferrable[]= list.toArray(new String[0]);
-                    worker.setAdapter(new Adapter(transferrable));
+                     transferrable= list.toArray(new String[0]);
 
-                }
-            }});
+                    worker.setAdapter(new Adapter(Workers.this,transferrable));
+                    }}});
+
+
+
+
+
+
 
         FloatingActionButton fab = view.findViewById(R.id.button_add_worker);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -79,4 +90,19 @@ public class Workers extends Fragment {
             }
         });
     }
+
+
+    @Override
+    public void onItemClick(int position) {
+        Toast.makeText(getActivity(), "position is "+position, Toast.LENGTH_SHORT).show();
+
+       Intent tntodetail=new Intent(getActivity(),Worker_display_detail.class);
+        tntodetail.putExtra("worker_name",transferrable[position]);
+       startActivity(tntodetail);
+
+
+
+    }
 }
+
+

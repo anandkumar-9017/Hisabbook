@@ -1,10 +1,12 @@
 package com.example.hisabbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,7 +32,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class sale extends Fragment {
+public class sale extends Fragment implements Adapter.OnClicker {
+    String transferrable[];
 
 
 
@@ -44,7 +47,7 @@ public class sale extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final NavController navController = Navigation.findNavController(view);
         super.onViewCreated(view, savedInstanceState);
@@ -64,10 +67,12 @@ public class sale extends Fragment {
                         list.add(document.getId());
                     }
                     String transferrable[]= list.toArray(new String[0]);
-                    sale.setAdapter(new Adapter(transferrable));
+                    sale.setAdapter(new Adapter(sale.this,transferrable));
 
-                }
-            }});
+                }}});
+
+
+
 
         FloatingActionButton fab = view.findViewById(R.id.button_add_sale);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -78,5 +83,16 @@ public class sale extends Fragment {
 
             }
         });
+    }
+
+
+    @Override
+    public void onItemClick(int position) { Toast.makeText(getActivity(), "position is "+position, Toast.LENGTH_SHORT).show();
+
+        Intent tntodetail=new Intent(getActivity(),Sale_date.class);
+        tntodetail.putExtra("date",transferrable[position]);
+        startActivity(tntodetail);
+
+
     }
 }

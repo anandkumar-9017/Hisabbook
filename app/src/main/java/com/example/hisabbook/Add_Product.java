@@ -81,11 +81,9 @@ public class Add_Product extends Fragment {
                 Map<String, Object> user_categ = new HashMap<>();
                 user_categ.put("Category", Category_var);
                 dr.set(user_categ);
+
                 DocumentReference dr_products=dr.collection("Product").document(Product_Name_var);
                 Map<String, Object> user = new HashMap<>();
-
-
-                user.put("Category", Category_var);
                 user.put("Phone Code", Product_var);
                 user.put("Product Name", Product_Name_var);
                 user.put("Size", Size_var);
@@ -93,15 +91,15 @@ public class Add_Product extends Fragment {
                 user.put("MRP", MRP_var);
                 user.put("Last Bought", Date_var);
                 user.put("Quantity", Quantity_var);
-                user.put("Vender", Vender_var);
+                user.put("Venders", Vender_var);
 
 
                 DocumentReference dr_vend = fstore.collection("users").document(firebaseid).collection("Vender").document(Vender_var);
                 Map<String, Object> user_vender = new HashMap<>();
                 user_categ.put("Category", Category_var);
-                dr.set(user_vender);
+                dr_vend.set(user_vender);
 
-                DocumentReference dr_vender_prod=dr_vend.collection(Product_Name_var).document(Date_var);
+                DocumentReference dr_vender_prod=dr_vend.collection("Products").document(Product_Name_var);
                 Map<String, Object> user_vend = new HashMap<>();
                 user_vend.put("Category", Category_var);
                 user_vend.put("Phone Code", Product_var);
@@ -109,11 +107,12 @@ public class Add_Product extends Fragment {
                 user_vend.put("Size", Size_var);
                 user_vend.put("Cost Price", Cost_Price_var);
                 user_vend.put("MRP", MRP_var);
-                user_vend.put("Date", Date_var);
+                user_vend.put("last bought", Date_var);
                 user_vend.put("Quantity", Quantity_var);
-                user_vend.put("Vender", Vender_var);
+                user_vend.put("Venders", Vender_var);
 
-                dr_vend.set(user_vend);
+                dr_vender_prod.set(user_vender);
+
 
 
 

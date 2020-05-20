@@ -30,7 +30,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Category extends Fragment {
+public class Category extends Fragment implements Adapter.OnClicker {
+    String transferrable[];
 
 
 
@@ -64,10 +65,12 @@ public class Category extends Fragment {
                         list.add(document.getId());
                     }
                     String transferrable[]= list.toArray(new String[0]);
-                    category.setAdapter(new Adapter(transferrable));
+                    category.setAdapter(new Adapter(Category.this,transferrable));
+                }}});
 
-            }
-        }});
+
+
+
 
 
 
@@ -77,8 +80,15 @@ public class Category extends Fragment {
             public void onClick(View view) {
                 navController.navigate(R.id.action_nav_category_to_button_add_categ);
 
-
             }
-        });
+            });
+        }
+
+    @Override
+    public void onItemClick(int position) {
+
     }
 }
+
+
+

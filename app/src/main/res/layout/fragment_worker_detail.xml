@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Worker_display_detail">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="115dp"
+        android:layout_height="118dp"
+        android:src="@drawable/ic_menu_profile"
+        android:layout_margin="25dp"/>
+
+    <TextView
+    android:id="@+id/worker_display_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Name"
+    android:layout_marginLeft="160dp"
+    android:textSize="25sp"
+    android:layout_marginTop="50dp"
+    />
+
+    <TextView
+        android:id="@+id/worker_display_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:layout_marginLeft="160dp"
+        android:textSize="25sp"
+        android:layout_marginTop="85dp"
+        />
+
+    <TextView
+        android:id="@+id/worker_display_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="140dp"
+        android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+        android:text="Salary"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/worker_display_age"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="180dp"
+        android:drawableLeft="@drawable/ic_visibility_age"
+        android:text="Age"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/worker_display_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="220dp"
+        android:drawableLeft="@drawable/ic_home"
+        android:text="Address"
+        android:textSize="25sp" />
+
+    </FrameLayout>

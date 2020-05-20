@@ -1,10 +1,12 @@
 package com.example.hisabbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,7 +31,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customers extends Fragment {
+public class Customers extends Fragment implements Adapter.OnClicker {
+    String transferrable[];
 
 
 
@@ -43,7 +46,7 @@ public class Customers extends Fragment {
         return root;
     }
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final NavController navController = Navigation.findNavController(view);
         super.onViewCreated(view, savedInstanceState);
@@ -63,10 +66,12 @@ public class Customers extends Fragment {
                         list.add(document.getId());
                     }
                     String transferrable[]= list.toArray(new String[0]);
-                    customer.setAdapter(new Adapter(transferrable));
+                    customer.setAdapter(new Adapter(Customers.this,transferrable));
+                }}});
 
-                }
-            }});
+
+
+
 
         FloatingActionButton fab = view.findViewById(R.id.button_add_customer);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +79,20 @@ public class Customers extends Fragment {
             public void onClick(View view) {
                 navController.navigate(R.id.action_nav_customer_to_button_add_customer);
 
-
+                }
             }
-        });
-}}
+        );
+}
+
+
+    @Override
+    public void onItemClick(int position) {
+        Toast.makeText(getActivity(), "position is "+position, Toast.LENGTH_SHORT).show();
+
+        Intent tntocustomer=new Intent(getActivity(),Worker_display_detail.class);
+        tntocustomer.putExtra("Customer_name",transferrable[position]);
+        startActivity(tntocustomer);
+
+
+    }
+}

@@ -84,5 +84,6 @@
     <string name="vender_name">Vender Name</string>
     <string name="add_vender">Add Vender</string>
     <string name="add_sale">Add Sale</string>
+    <string name="Edit_Profile">Edit Profile</string>
 
 </resources>
