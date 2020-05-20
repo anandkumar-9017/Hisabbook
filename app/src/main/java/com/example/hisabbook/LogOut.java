@@ -33,7 +33,7 @@ public class LogOut extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button log=view.findViewById(R.id.button4);
+        Button log=view.findViewById(R.id.button_update_profile);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

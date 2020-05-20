@@ -24,12 +24,12 @@
         android:id="@+id/Prof_Name_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Owner_name_edit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:hint="@string/name" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -38,12 +38,12 @@
         android:id="@+id/Prof_shop_name_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/owner_shop_name_edit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:hint="@string/shop_name" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -52,12 +52,12 @@
         android:id="@+id/GST_Number_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/owner_gst_number_edit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:hint="@string/gst_number" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,12 +66,12 @@
         android:id="@+id/prof_phone_number_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Owner_phone_number_edit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:hint="@string/phone_number" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -80,12 +80,12 @@
         android:id="@+id/Owner_Email_add_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/owner_emailadsress_edit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:hint="@string/email_address" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,12 +94,12 @@
         android:id="@+id/Owner_shop_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="2dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/owner_shop_adress_editress_edit"
+            android:id="@+id/owner_shop_address_edit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="70dp"
             android:hint="@string/shop_address" />
 
     </com.google.android.material.textfield.TextInputLayout>

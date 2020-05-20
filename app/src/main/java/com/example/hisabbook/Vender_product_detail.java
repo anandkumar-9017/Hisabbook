@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Vender_product_detail extends AppCompatActivity {
+public class Vender_product_detail extends AppCompatActivity  {
     private TextView vender_name;
     private String collect;
     private String collect2;

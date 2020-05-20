@@ -57,7 +57,7 @@ public class EditProfile extends Fragment {
             prof_phone=view.findViewById(R.id.Owner_phone_number_edit);
             prof_email=view.findViewById(R.id.owner_emailadsress_edit);
             prof_gst=view.findViewById(R.id.owner_gst_number_edit);
-            prof_shop_Address=view.findViewById(R.id.owner_shop_adress_edit);
+            prof_shop_Address=view.findViewById(R.id.owner_shop_address_edit);
             String firebaseid = mAuth.getCurrentUser().getUid();
             final DocumentReference dr = fstore.collection("users").document(firebaseid);
             dr.get()

@@ -71,7 +71,7 @@ private String[] data;
             super(itemView);
 
             category_text=itemView.findViewById(R.id.text_view_name);
-            itemworker= (LinearLayout) itemView.findViewById(R.id.item_contact_id);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
