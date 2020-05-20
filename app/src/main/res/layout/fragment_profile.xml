@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="80dp"
-    android:orientation="vertical"
     tools:context=".Profile">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:orientation="horizontal">
 
 
         <TextView
             android:id="@+id/Prof_Name"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="15dp"
             android:gravity="center"
-            android:layout_weight="1"
+
             android:text="@string/Name"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Owner_name"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Name"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:orientation="horizontal">
 
 
         <TextView
             android:id="@+id/Prof_shop_name"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginLeft="15dp"
             android:gravity="center"
             android:layout_weight="1"
             android:text="@string/shop_name"
@@ -50,21 +44,21 @@
         <TextView
             android:id="@+id/owner_shop_name"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="51dp"
+            android:text="xyz limited"
+            android:gravity="center"
+            android:layout_marginTop="52dp"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:orientation="horizontal">
 
 
         <TextView
             android:id="@+id/GST_Number"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="104dp"
+
+            android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/gst_number"
@@ -73,21 +67,19 @@
         <TextView
             android:id="@+id/owner_gst_number"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="51dp"
+            android:text="9999999999"
+            android:layout_marginTop="104dp"
+            android:gravity="center"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:orientation="horizontal">
-
 
         <TextView
             android:id="@+id/prof_phone_number"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginLeft="15dp"
             android:gravity="center"
             android:layout_weight="1"
             android:text="@string/phone_number"
@@ -96,21 +88,19 @@
         <TextView
             android:id="@+id/Owner_phone_number"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="51dp"
+            android:text="9999999999"
+            android:gravity="center"
+            android:layout_marginTop="156dp"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:orientation="horizontal">
-
 
         <TextView
             android:id="@+id/Owner_Email_add"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="217dp"
+            android:layout_marginLeft="15dp"
             android:gravity="center"
             android:layout_weight="1"
             android:text="@string/email_address"
@@ -119,21 +109,22 @@
         <TextView
             android:id="@+id/owner_emailadsress"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:text="xyz@gmail.com"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:layout_marginTop="217dp"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:orientation="horizontal">
+
+
 
 
         <TextView
             android:id="@+id/Prof_shop_address"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="269dp"
+            android:layout_marginLeft="15dp"
             android:gravity="center_horizontal"
             android:paddingTop="10dp"
             android:layout_weight="1"
@@ -143,29 +134,27 @@
         <TextView
             android:id="@+id/owner_shop_address"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_margin="10dp"
+            android:layout_height="51dp"
+            android:gravity="center"
+            android:text="abcd"
+            android:layout_marginTop="269dp"
+            android:layout_marginLeft="115dp"
             android:layout_weight="1" />
 
-    </LinearLayout>
-
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="59dp"
-       android:orientation="horizontal"
-       android:layout_marginHorizontal="100dp">
-
-       <Button
-           android:id="@+id/button_edit_profile"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginEnd="20dp"
-           android:layout_marginRight="20dp"
-           tools:text="Edit Profile" />
 
 
-   </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+         />
 
 
-</LinearLayout>
+
+
+</FrameLayout>

@@ -83,7 +83,7 @@ public class Profile extends Fragment {
                     }
                 });
 
-        Button fab = view.findViewById(R.id.button_edit_profile);
+        FloatingActionButton fab = view.findViewById(R.id.button_edit_profile);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
